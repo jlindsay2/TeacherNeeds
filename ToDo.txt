@@ -1,25 +1,20 @@
 
-[working on it -- 12/19/2015, 5:45pm]
+
 **** DONE ****
 - Welcome Page: Links to teachers and linka to Needs list
 - Teachers: Have model, seed data, can show list, create new teachers, edit/update teachers
 - Teacher Needs: Data and references are good.
     - input new needs for given teacher
     - See all needs or see needs for a given teacher
-- TeacherNeed Status
-    - when new Need created, it defaults the Status to 'Active'
-- Code Control up on GitHub under TeacherNeedsB
+- Code Control up on GitHub under "TeacherNeeds"
     - Note: one must have Git, make a git repository, remove CRLF line in .gitconfig, share it to GitHub,
         and do a Commit and Push to commit to GitHub.
+- TeacherNeed Status
+    - when new Need created, it defaults the Status to 'Active'
 
 ************* BASIC FUNCTIONALITY TO DO (Version 1.0) *******************
-- NEXT: GitHub / git?
-- DOING NOW: teacher_needs status
-    - SET: Allowed statuses: "Active", "Filled", "Closed"
-        Active: When a new item is created.
-        Filled: When someone fills a need.
-        Closed: When a creater of a need agrees a need is Filled.
-        Teachers can set any need to Active, Filled, or Closed.
+
+- IN PROCESS: teacher_needs status (Allowed statuses: "Active", "Filled", "Closed")
     - THEN: Allow it to be set to "Filled" from the All Needs Screen
         By default show only the Active items.  Have a checkbox by each item so they can take block actions.
     - THEN: From teacher screen they can edit it, including changing the status
