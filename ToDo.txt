@@ -1,5 +1,5 @@
 
-[working on it -- 12/19/2015, 4:57pm]
+[working on it -- 12/19/2015, 5:45pm]
 **** DONE ****
 - Welcome Page: Links to teachers and linka to Needs list
 - Teachers: Have model, seed data, can show list, create new teachers, edit/update teachers
@@ -8,6 +8,9 @@
     - See all needs or see needs for a given teacher
 - TeacherNeed Status
     - when new Need created, it defaults the Status to 'Active'
+- Code Control up on GitHub under TeacherNeedsB
+    - Note: one must have Git, make a git repository, remove CRLF line in .gitconfig, share it to GitHub,
+        and do a Commit and Push to commit to GitHub.
 
 ************* BASIC FUNCTIONALITY TO DO (Version 1.0) *******************
 - NEXT: GitHub / git?
