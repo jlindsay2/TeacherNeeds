@@ -1,0 +1,18 @@
+**** "This page is not available"
+Most likely the rails server is not running.
+
+**** ExecJS::RuntimeError in Welcome#index
+If this happens early on in development, it is a known Windows UTF-16 vs. UTF-8 problem.  There are many ways to fix it.  One way is to
+edit app/views/layouts/application.html.erb and change the "application" to "defaults" in the javascript line.
+
+***** "undoing" a rails generate
+rails generate controller article
+# Oops!
+rails destroy controller article
+rails generate controller articles
+
+? how to do this in RubyMine
+Note: Using GitHub to just rollback is best
+
+******** "Template" errors
+Note: this is referring to a View

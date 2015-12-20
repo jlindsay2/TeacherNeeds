@@ -1,0 +1,30 @@
+<!--
+<h1>TeacherNeeds#index</h1>
+<p>Find me in app/views/teacher_needs/index.html.erb</p>
+-->
+<h1> All Teacher Needs</h1>
+<br>
+<br>
+
+<table border = 1>
+  <tr>
+    <th>Teacher</th>
+    <th>Teacher Room</th>
+    <th>Description</th>
+    <th>Creation Date</th>
+    <th>Last Updated</th>
+    <th>Status</th>
+  </tr>
+  <% @teacher_needs.each do |need| %>
+    <tr>
+      <td><%= need.teacher.first_name %>&nbsp;<%= need.teacher.last_name %></td>
+      <td><%= need.teacher.room %></td>
+      <td><%= need.description %></td>
+      <td><%= need.created_at %></td>
+      <td><%= need.updated_at %></td>
+      <td><%= need.status %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br><p><%= link_to 'Home Page', root_path %></p>

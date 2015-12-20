@@ -1,0 +1,56 @@
+
+
+<!-- Find me in app/views/teachers/show.html.erb -->
+
+  <h1><%= @teacher.first_name %>&nbsp;<%= @teacher.last_name %></h1>
+  Room&nbsp;<%= @teacher.room %>
+  <%= @teacher.comments %>
+
+<table border = 1>
+  <tr>
+    <td>
+      <h2>Existing Needs</h2>
+      <table border = 1>
+        <tr>
+          <th>Description</th>
+          <th>Creation Date</th>
+          <th>Last Updated</th>
+          <th>Status</th>
+        </tr>
+
+        <% @teacher.teacher_needs.each do |need| %>
+            <tr>
+              <td><%= need.description %></td>
+              <td><%= need.created_at %></td>
+              <td><%= need.updated_at %></td>
+              <td><%= need.status %></td>
+            </tr>
+        <% end %>
+      </table>
+    </td>
+    <td>
+      <h2>What do You Need?:</h2>
+
+      <!-- Note that this form will be routed to TeacherNeedsController::create() -->
+      <%= form_for([@teacher, @teacher.teacher_needs.build]) do |f| %>
+          <p>
+            <%= f.label :description %><br>
+            <%= f.text_field :description %>
+          </p>
+          <p>
+            <%= f.label :comments %><br>
+            <%= f.text_area :comments %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+      <% end %>
+
+    </td>
+  </tr>
+</table>
+
+<br><br>
+
+<%= link_to 'Back', teachers_path %>
+<%= link_to 'Home Page', root_path %>
