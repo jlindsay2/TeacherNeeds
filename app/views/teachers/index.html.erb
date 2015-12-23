@@ -14,7 +14,7 @@
         <td><%= teacher.first_name %></td>
         <td><%= teacher.room %></td>
         <td><%= teacher.comments %></td>
-        <td><%= link_to 'Select', teacher_path(teacher) %></td>
+        <td><%= link_to 'View', teacher_path(teacher) %></td>
         <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
       </tr>
   <% end %>
@@ -22,3 +22,4 @@
 
 <br><p><%= link_to 'Home Page', root_path %></p>
 <p><%= link_to 'Add New Teacher or Staff Member', new_teacher_path %></p>
+<p></p><%= link_to("List of Teachers' Needs", teacher_needs_path) %></p>

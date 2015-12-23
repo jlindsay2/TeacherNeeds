@@ -6,25 +6,40 @@
 <br>
 <br>
 
-<table border = 1>
-  <tr>
-    <th>Teacher</th>
-    <th>Teacher Room</th>
-    <th>Description</th>
-    <th>Creation Date</th>
-    <th>Last Updated</th>
-    <th>Status</th>
-  </tr>
-  <% @teacher_needs.each do |need| %>
-    <tr>
-      <td><%= need.teacher.first_name %>&nbsp;<%= need.teacher.last_name %></td>
-      <td><%= need.teacher.room %></td>
-      <td><%= need.description %></td>
-      <td><%= need.created_at %></td>
-      <td><%= need.updated_at %></td>
-      <td><%= need.status %></td>
-    </tr>
-  <% end %>
-</table>
+<% $debugging.each do |line| %>
+    <%= line %><br>
+<% end %>
 
+<%= form_tag({prefix: "teacher_teacher_needs", controller: "teacher_needs", action: "update_checked"}, method: "patch") do %>
+    <table border = 1>
+      <tr>
+        <th>Filled?</th>
+        <th>Teacher</th>
+        <th>Teacher Room</th>
+        <th>Description</th>
+        <th>Comments</th>
+        <th>Creation Date</th>
+        <th>Last Updated</th>
+        <th>Status</th>
+      </tr>
+      <% @teacher_needs.each do |need| %>
+          <% if need.status != "Filled" %>
+            <tr>
+              <td><%= check_box_tag(need.id) %></td>
+              <td><%= need.teacher.last_name %>,&nbsp;<%= need.teacher.first_name %></td>
+              <td><%= need.teacher.room %></td>
+              <td><%= need.description %></td>
+              <td><%= need.comments %></td>
+              <td><%= show_date need.created_at %></td>
+              <td><%= show_date need.updated_at %></td>
+              <td><%= need.status %></td>
+            </tr>
+          <% end %>
+      <% end %>
+    </table>
+    <%= submit_tag %>
+<% end %>
+
+<br>
+<br><%= link_to("List of Teachers", teachers_path) %>
 <br><p><%= link_to 'Home Page', root_path %></p>

@@ -12,24 +12,26 @@
       <h2>Existing Needs</h2>
       <table border = 1>
         <tr>
+          <th>Status</th>
           <th>Description</th>
+          <th>Comments</th>
           <th>Creation Date</th>
           <th>Last Updated</th>
-          <th>Status</th>
         </tr>
 
         <% @teacher.teacher_needs.each do |need| %>
             <tr>
-              <td><%= need.description %></td>
-              <td><%= need.created_at %></td>
-              <td><%= need.updated_at %></td>
               <td><%= need.status %></td>
+              <td><%= need.description %></td>
+              <td><%= need.comments %></td>
+              <td><%= show_date need.created_at %></td>
+              <td><%= show_date need.updated_at %></td>
             </tr>
         <% end %>
       </table>
     </td>
     <td>
-      <h2>What do You Need?:</h2>
+      <h2>What do You Need?</h2>
 
       <!-- Note that this form will be routed to TeacherNeedsController::create() -->
       <%= form_for([@teacher, @teacher.teacher_needs.build]) do |f| %>
@@ -52,5 +54,10 @@
 
 <br><br>
 
-<%= link_to 'Back', teachers_path %>
-<%= link_to 'Home Page', root_path %>
+<%= link_to 'Home Page', root_path %><br>
+<%= link_to 'Teachers List', teachers_path %><br>
+<%= link_to 'All Teacher Needs List', teacher_needs_path %>
+
+<h3>
+<p>Teachers, please note that it may take up to three school days to fill your request.</p>
+</h3>

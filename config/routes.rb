@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   get 'teacher_needs' => 'teacher_needs#index'
+  patch 'teacher_teacher_needs' => 'teacher_needs#update_checked'
 end
 
 

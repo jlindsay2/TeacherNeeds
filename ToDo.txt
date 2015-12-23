@@ -11,17 +11,18 @@
         and do a Commit and Push to commit to GitHub.
 - TeacherNeed Status
     - when new Need created, it defaults the Status to 'Active'
+    - There is checkbox by each item in the full needs list, so they can mark multiple items Filled.
+        All items marked Filled are removed from the visible list (they remain in the db).
 
 ************* BASIC FUNCTIONALITY TO DO (Version 1.0) *******************
+- BUGS TO FIX: none
 
 - IN PROCESS: teacher_needs status (Allowed statuses: "Active", "Filled", "Closed")
-    - THEN: Allow it to be set to "Filled" from the All Needs Screen
-        By default show only the Active items.  Have a checkbox by each item so they can take block actions.
-    - THEN: From teacher screen they can edit it, including changing the status
     - THEN: From teacher screen remove items they have Closed (Give a feedback message.)
+    - THEN: From teacher screen they can edit it, including changing the status
 - THEN: Sort All Needs List by (a) Date or (b) Teacher & Date
 - THEN: Get it to look decent (do some CSS)
-- THEN: Allow it to printed out
+- THEN: Allow the Teacher Needs list to be printed out
 - THEN: Beta Test: Two teachers and Atiere
 
 ********** HOPEFULLY NEXT VERSION ************
@@ -31,7 +32,7 @@
 - Use partial forms.
 - Test driven development
 - Validation
-- Privileges / Security
+- Privileges / Security / Authentication
 
 ************* LATER *******************
 - Refactor 'teacher_need' to 'need'?
