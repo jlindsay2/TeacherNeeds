@@ -12,7 +12,7 @@
 - TeacherNeed Status
     - when new Need created, it defaults the Status to 'Active'
     - There is checkbox by each item in the full needs list, so they can mark multiple items Filled.
-        All items marked Filled are removed from the visible list (they remain in the db).
+        All items marked Filled are removed from the visible list (they remain in the db). 
 
 ************* BASIC FUNCTIONALITY TO DO (Version 1.0) *******************
 - BUGS TO FIX: none
