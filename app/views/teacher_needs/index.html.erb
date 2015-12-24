@@ -2,7 +2,7 @@
 <h1>TeacherNeeds#index</h1>
 <p>Find me in app/views/teacher_needs/index.html.erb</p>
 -->
-<h1> All Teacher Needs</h1>
+<h1> All Teacher Needs Page </h1>
 <br>
 <br>
 
@@ -12,6 +12,7 @@
 
 <%= form_tag({prefix: "teacher_teacher_needs", controller: "teacher_needs", action: "update_checked"}, method: "patch") do %>
     <table border = 1>
+      <caption>All Unfilled Needs</caption>
       <tr>
         <th>Filled?</th>
         <th>Teacher</th>
@@ -43,3 +44,9 @@
 <br>
 <br><%= link_to("List of Teachers", teachers_path) %>
 <br><p><%= link_to 'Home Page', root_path %></p>
+
+<br><br><h2>HINTS AND TIPS</h2>
+<ul>
+  <li>To print this page out, hold down the Ctrl key and press 'P', or select Print from your browser.</li>
+
+</ul>

@@ -6,24 +6,26 @@
 - Teacher Needs: Data and references are good.
     - input new needs for given teacher
     - See all needs or see needs for a given teacher
+    - Can print simply from the browser.
 - Code Control up on GitHub under "TeacherNeeds"
     - Note: one must have Git, make a git repository, remove CRLF line in .gitconfig, share it to GitHub,
         and do a Commit and Push to commit to GitHub.
 - TeacherNeed Status
     - when new Need created, it defaults the Status to 'Active'
     - There is checkbox by each item in the full needs list, so they can mark multiple items Filled.
-        All items marked Filled are removed from the visible list (they remain in the db). 
+        All items marked Filled are removed from the visible list (they remain in the db).
+- Get it to look decent (using CSS mainly)
+
 
 ************* BASIC FUNCTIONALITY TO DO (Version 1.0) *******************
-- BUGS TO FIX: none
-
 - IN PROCESS: teacher_needs status (Allowed statuses: "Active", "Filled", "Closed")
     - THEN: From teacher screen remove items they have Closed (Give a feedback message.)
     - THEN: From teacher screen they can edit it, including changing the status
-- THEN: Sort All Needs List by (a) Date or (b) Teacher & Date
-- THEN: Get it to look decent (do some CSS)
-- THEN: Allow the Teacher Needs list to be printed out
+
+- TO-DO?: Sort All Needs List by (a) Date or (b) Teacher & Date
 - THEN: Beta Test: Two teachers and Atiere
+
+*************** KNOWN BUGS *****************
 
 ********** HOPEFULLY NEXT VERSION ************
 - THEN: Sort by department?

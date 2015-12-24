@@ -1,3 +1,34 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+   background-color: #bbff99;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+th {
+  text-align: center;
+  font-weight: bold;
+  background-color: #00cc44
+}
+
+// The next rules align the text of the header cells on their baseline and vertically center the text in each data cell:
+th { vertical-align: baseline }
+td { vertical-align: middle }
+
+
+// The next rules specify that the top row will be surrounded by a 3px solid blue border and each of the other rows will
+// be surrounded by a 1px solid black border.
+table   { border-collapse: collapse }
+caption {
+  font-size: 40px;
+  caption-side: top;
+}
+tr#row1 { border: 3px solid blue }
+tr#row2 { border: 1px solid black }
+tr#row3 { border: 1px solid black }

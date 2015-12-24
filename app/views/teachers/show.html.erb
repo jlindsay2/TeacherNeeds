@@ -3,10 +3,12 @@
 <!-- Find me in app/views/teachers/show.html.erb -->
 
   <h1><%= @teacher.first_name %>&nbsp;<%= @teacher.last_name %></h1>
-  Room&nbsp;<%= @teacher.room %>
-  <%= @teacher.comments %>
+  <center>
+    Room:&nbsp;<%= @teacher.room %><br>
+    <%= @teacher.comments %>
+  </center>
 
-<table border = 1>
+<table cellspacing="10" cellpadding="50">
   <tr>
     <td>
       <h2>Existing Needs</h2>
@@ -17,6 +19,7 @@
           <th>Comments</th>
           <th>Creation Date</th>
           <th>Last Updated</th>
+          <th>Mark It...</th>
         </tr>
 
         <% @teacher.teacher_needs.each do |need| %>
@@ -26,6 +29,11 @@
               <td><%= need.comments %></td>
               <td><%= show_date need.created_at %></td>
               <td><%= show_date need.updated_at %></td>
+              <% if need.status == "Filled" %>
+                <td>Active&nbsp;&nbsp;Closed</td>
+              <% else %>
+                <td>Closed</td>
+              <% end %>
             </tr>
         <% end %>
       </table>
