@@ -22,7 +22,9 @@ th { vertical-align: baseline }
 td { vertical-align: middle }
 
 
-table   { border-collapse: collapse }
+table   {
+  border-collapse: collapse
+}
 caption {
   font-size: 40px;
   caption-side: top;

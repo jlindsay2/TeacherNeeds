@@ -19,17 +19,24 @@
 - Got it to look decent (using CSS mainly)
 
 ************* NOW DOING **************
-*** GETTING IT INTO PRODUCTION ****
-Working on: page 5 of 15 in the guide is next
-Done: Got Heroku Toobelt installed and running via command line.  Using PostgresSQL now instead of SQLite3
+* GETTING IT INTO PRODUCTION *
+Done: IT RUNS ON HEROKU!!
+    Got Heroku Toobelt installed and running via command line.  Using PostgresSQL now instead of SQLite3.
+    Committed code to GitHub.  Connected Heroku to GitHub.  Told Heroku to deploy code in GitHub.
+    Migrated db on Heroku.
+Do Next:
+    * Can I change the URL to "TeacherNeeds??"
+    * Can we alpha/beta test this during the summer (go to ECHS?  Talk to Lisa / Atiere about it?)
+        * Who could be users this summer?  How does non-teaching staff get materials?
+    * Remove / Comment on my requests for help at RubyMine community and at StackOverflow
 
 *************** KNOWN BUGS *****************
 BUG-0001 April 2016: I couldn't seem to inspect the db from within the SQLite3 console anymore
 
 ********** DESIRED IMPROVEMENTS (PRIORITIZED) ************
 LAST ENHancement[last ID: #9], MAIntainablity[2], STAbility[1], PROductivy[1], DEPloyment[1 is last id]
-- DEP-001(1.0) -- Get it into production
-- DEP-002(1.1) -- Beta Test: 2-5 teachers, Atiere, Lisa, and principal
+- DEP-001(1.0) -- Get it into production [VERY CLOSE AS OF 6/30/16]
+- DEP-002(1.1) -- Get Beta Test Going: 2-5 teachers, Atiere, Lisa, and principal
 - ENH-001(1.2) -- Password and Login (Privileges / Security / Authentication)
 - MAI-001(1.4) -- Use partial forms. (removing duplicate code)
 - STA-001(1.6) -- Test driven development (for long term stability)
