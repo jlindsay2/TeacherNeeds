@@ -22,13 +22,9 @@ th { vertical-align: baseline }
 td { vertical-align: middle }
 
 
-// The next rules specify that the top row will be surrounded by a 3px solid blue border and each of the other rows will
-// be surrounded by a 1px solid black border.
 table   { border-collapse: collapse }
 caption {
   font-size: 40px;
   caption-side: top;
 }
-tr#row1 { border: 3px solid blue }
-tr#row2 { border: 1px solid black }
-tr#row3 { border: 1px solid black }
+tr#row1 { border: 10px solid blue }  // doesn't seem to do anything.....

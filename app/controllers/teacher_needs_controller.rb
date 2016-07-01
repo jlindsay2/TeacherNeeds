@@ -16,6 +16,17 @@ class TeacherNeedsController < ApplicationController
     redirect_to teacher_path(@teacher)
   end
 
+  def edit
+    @teacher_need = TeacherNeed.find(params[:id])
+  end
+
+  def update
+    @need = TeacherNeed.find(params[:id])
+    @need.update(teacher_needs_params)
+
+    redirect_to teacher_path(@need.teacher_id)
+  end
+
   def update_checked
     #$debugging << "--------------------->TeacherNeedsController::update_checked() called."
     #$debugging << params
@@ -29,17 +40,24 @@ class TeacherNeedsController < ApplicationController
       end
     end
 
-
     redirect_to teacher_needs_path
     end
-=begin
-  def update
-    @teacher = Teacher.find(params[:id])
 
-    @teacher.update(teacher_params)
-    redirect_to teachers_path
+  def close
+    @need = TeacherNeed.find(params[:id])
+    @teacher = Teacher.find(@need.teacher_id)
+
+    @need.update_column('status', CLOSED)
+    redirect_to teacher_path(@teacher)
   end
-=end
+
+  def reactivate
+    @need = TeacherNeed.find(params[:id])
+    @teacher = Teacher.find(@need.teacher_id)
+
+    @need.update_column('status', ACTIVE)
+    redirect_to teacher_path(@teacher)
+  end
 
 
   private #############################################################################################

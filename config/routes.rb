@@ -9,6 +9,13 @@ Rails.application.routes.draw do
 
   get 'teacher_needs' => 'teacher_needs#index'
   patch 'teacher_teacher_needs' => 'teacher_needs#update_checked'
+
+  # Allows a teacher to mark a teacher_need Closed or Active.  Using GET as a kludge; it is not seeing the PATCH...
+  #    perhaps a JavaScript problem????
+  get   'teacher_needs/:id/close', to: 'teacher_needs#close', as: 'close_teacher_need'
+  #patch 'teacher_needs/:id/close', to: 'teacher_needs#close', as: 'close_teacher_need'
+  get   'teacher_needs/:id/reactivate', to: 'teacher_needs#reactivate', as: 'reactivate_teacher_need'
+  #patch 'teacher_needs/:id/re-activate', to: 'teacher_needs#re-activate', as: 're-activate_teacher_need'
 end
 
 

@@ -1,49 +1,51 @@
 
 
-**** DONE ****
+*********** VERSION 0.1 ********************
 - Welcome Page: Links to teachers and linka to Needs list
 - Teachers: Have model, seed data, can show list, create new teachers, edit/update teachers
-- Teacher Needs: Data and references are good.
-    - input new needs for given teacher
+- All Teacher Needs: Data and references are good.
     - See all needs or see needs for a given teacher
-    - Can print simply from the browser.
+    - Can print the list of needs simply from the browser.
+    - There is checkbox by each item in the full needs list, so someone meeting a need can mark multiple items Filled.
+        All items marked Filled are removed from the visible list (they remain in the db).
+- Each Teacher Can:
+    - input new needs
+    - when new Need created, it defaults the Status to 'Active'
+    - see the status of all open needs
+    - Teachers can mark their need's status as 'Closed' or 'Active'.
 - Code Control up on GitHub under "TeacherNeeds"
     - Note: one must have Git, make a git repository, remove CRLF line in .gitconfig, share it to GitHub,
         and do a Commit and Push to commit to GitHub.
-- TeacherNeed Status
-    - when new Need created, it defaults the Status to 'Active'
-    - There is checkbox by each item in the full needs list, so they can mark multiple items Filled.
-        All items marked Filled are removed from the visible list (they remain in the db).
-- Get it to look decent (using CSS mainly)
+- Got it to look decent (using CSS mainly)
 
-
-************* BASIC FUNCTIONALITY TO DO (Version 1.0) *******************
-- IN PROCESS: teacher_needs status (Allowed statuses: "Active", "Filled", "Closed")
-    - THEN: From teacher screen remove items they have Closed (Give a feedback message.)
-    - THEN: From teacher screen they can edit it, including changing the status
-
-- TO-DO?: Sort All Needs List by (a) Date or (b) Teacher & Date
-- THEN: Beta Test: Two teachers and Atiere
+************* NOW DOING **************
+*** GETTING IT INTO PRODUCTION ****
+Working on: page 5 of 15 in the guide is next
+Done: Got Heroku Toobelt installed and running via command line.  Using PostgresSQL now instead of SQLite3
 
 *************** KNOWN BUGS *****************
+BUG-0001 April 2016: I couldn't seem to inspect the db from within the SQLite3 console anymore
 
-********** HOPEFULLY NEXT VERSION ************
-- THEN: Sort by department?
-    (Have a Watch List. This would be another model.  One person can see the needs of their watch list.
-    This is so that, e.g., a department chair could just watch their people.)
-- Use partial forms.
-- Test driven development
-- Validation
-- Privileges / Security / Authentication
-
-************* LATER *******************
-- Refactor 'teacher_need' to 'need'?
-- Allow "Filled" to be set in bulk
-- Teachers: Delete a teacher.
-- Email people that supplies have been delivered to their box, their room, or other place
--
+********** DESIRED IMPROVEMENTS (PRIORITIZED) ************
+LAST ENHancement[last ID: #9], MAIntainablity[2], STAbility[1], PROductivy[1], DEPloyment[1 is last id]
+- DEP-001(1.0) -- Get it into production
+- DEP-002(1.1) -- Beta Test: 2-5 teachers, Atiere, Lisa, and principal
+- ENH-001(1.2) -- Password and Login (Privileges / Security / Authentication)
+- MAI-001(1.4) -- Use partial forms. (removing duplicate code)
+- STA-001(1.6) -- Test driven development (for long term stability)
+- PRO-001(1.8) -- Learn to use interactive debugger with Rails
+- ENH-005(2) -- Validation of fields
+- MAI-002(2) -- Refactor 'teacher_need' to 'need'?
+- ENH-002(2) -- Sort 'All Needs List' by different methods (a) Date or (b) Teacher & Date
+- ENH-003(3) -- Filter by teacher (a watch list)
+- ENH-004(4) -- Filter by type of request
+- ENH-007(?) -- Allow a teacher to be deleted(?) or set inactive
+- ENH-008(?) -- Email people that supplies have been delivered to their box, their room, or other place
+- ENH-009(?) -- Allow people to list items they supply (with status such as available, or 'on back-order', or 'gone'
+- DEP-003(?) -- Use Puma web-server instead of WEBrick
+- DEP-004(?) -- Use Ruby 2.something instead of Ruby 1.9.3
 
 ************* OTHER STUFF ****************************
-
+(nothing for now)
 
 

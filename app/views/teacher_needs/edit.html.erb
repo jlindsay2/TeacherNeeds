@@ -1,0 +1,24 @@
+<h2>Edit Your Request</h2>
+
+<!-- %= form_for :teacher, url: teacher_path, method: :patch do |f| %> -- editing a techer -->
+<!-- %= form_for([@teacher, @teacher.teacher_needs.build]) do |f| %> -- for a new teacher need -->
+
+<!-- Note that this form will be routed to TeacherNeedsController::update() -->
+<%= form_for :teacher_need, url: teacher_teacher_need_path, method: :patch do |f| %>
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_field :description %>
+    </p>
+    <p>
+      <%= f.label :comments %><br>
+      <%= f.text_area :comments %>
+    </p>
+    <p>
+      <%= f.label :status %><br>
+      <%= f.text_field :status %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
