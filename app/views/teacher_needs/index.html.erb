@@ -11,7 +11,7 @@
 <% end %>
 
 <%= form_tag({prefix: "teacher_teacher_needs", controller: "teacher_needs", action: "update_checked"}, method: "patch") do %>
-    <table border = 1>
+    <table class="center" border = 1>
       <caption>All Unfilled Needs</caption>
       <tr>
         <th>Filled?</th>
@@ -38,6 +38,7 @@
           <% end %>
       <% end %>
     </table>
+    <br>
     <%= submit_tag %>
 <% end %>
 
