@@ -17,42 +17,49 @@
     - Note: one must have Git, make a git repository, remove CRLF line in .gitconfig, share it to GitHub,
         and do a Commit and Push to commit to GitHub.
 - Got it to look decent (using CSS mainly)
-
-************* NOW DOING **************
-* GETTING IT INTO PRODUCTION *
-Done: IT RUNS ON HEROKU!!
+- DEP-0001(1.0) -- Get it into production
+    * It is running on Heroku at "teacher-needs.herokuapp.com"
     Got Heroku Toobelt installed and running via command line.  Using PostgresSQL now instead of SQLite3.
     Committed code to GitHub.  Connected Heroku to GitHub.  Told Heroku to deploy code in GitHub.
-    Migrated db on Heroku.
-Do Next:
-    * Can I change the URL to "TeacherNeeds??"
+    Migrated db on Heroku.  Renamed URL to "teacher-needs.herokuapp.com".  Fixed some CSS to make UI more attractive.
+- BUG-0002(1.0) -- Sort Teacher List by Last Name + First Name
+
+*************** IN PROCESS *****************
+- DEP-0002(1.1) -- Get Beta Test Going: 2-5 teachers, Atiere, Lisa, and principal
     * Can we alpha/beta test this during the summer (go to ECHS?  Talk to Lisa / Atiere about it?)
-        * Who could be users this summer?  How does non-teaching staff get materials?
-    * Remove / Comment on my requests for help at RubyMine community and at StackOverflow
+    * Who could be users this summer?  How does non-teaching staff get materials?
 
-*************** KNOWN BUGS *****************
-BUG-0001 April 2016: I couldn't seem to inspect the db from within the SQLite3 console anymore
+********** IMPROVEMENTS TO-DO (PRIORITIZED) ************
+*** LAST BUG[Next ID: #3], ENHancement[11], MAIntainablity[3], STAbility[2], PROductivy[4], DEPloyment[e is last id]
+- DEP-0003(1.0) -- ON-HOLD -- waiting for successful Beta test (item DEP-0002)
+    Get it fully and universally used at ECHS
+- ENH-0010(1.01) -- Learn how to use cookies in rails so that the user will go back to the last page viewed
+- ENH-0001(1.2) -- Password and Login (Privileges / Security / Authentication)
+    - ENH-0012(1.2) -- some kind of admin login, with admin rights
+- MAI-0001(1.4) -- Use partial forms. (removing duplicate code)
+- STA-0001(1.6) -- Test driven development (for long term stability)
+- PRO-0001(1.8) -- Learn to use interactive debugger with Rails
+- ENH-0005(2) -- Validation of fields
+- DEP-0004(2) -- Get my own URL, e.g. TeacherNeeds.com
+- MAI-0002(2) -- Refactor 'teacher_need' to 'need'?
+- ENH-0007(2) -- ability to remove/inactivate/hide a teacher [for now, just overwrite or ignore them or put in a comment...]
+- ENH-0002(2) -- Sort 'All Needs List' by different methods (a) Date or (b) Teacher & Date
+- ENH-0003(3) -- Filter by teacher (a watch list)
+- ENH-0004(4) -- Filter or sort by type of request (so that people can see if anyone wants what they have)
+- ENH-0009(4) -- Allow people to list items they supply (with status such as available, or 'on back-order', or 'gone')
+    requested by Lawrence Pang 7/2/16
 
-********** DESIRED IMPROVEMENTS (PRIORITIZED) ************
-LAST ENHancement[last ID: #9], MAIntainablity[2], STAbility[1], PROductivy[1], DEPloyment[1 is last id]
-- DEP-001(1.0) -- Get it into production [VERY CLOSE AS OF 6/30/16]
-- DEP-002(1.1) -- Get Beta Test Going: 2-5 teachers, Atiere, Lisa, and principal
-- ENH-001(1.2) -- Password and Login (Privileges / Security / Authentication)
-- MAI-001(1.4) -- Use partial forms. (removing duplicate code)
-- STA-001(1.6) -- Test driven development (for long term stability)
-- PRO-001(1.8) -- Learn to use interactive debugger with Rails
-- ENH-005(2) -- Validation of fields
-- MAI-002(2) -- Refactor 'teacher_need' to 'need'?
-- ENH-002(2) -- Sort 'All Needs List' by different methods (a) Date or (b) Teacher & Date
-- ENH-003(3) -- Filter by teacher (a watch list)
-- ENH-004(4) -- Filter by type of request
-- ENH-007(?) -- Allow a teacher to be deleted(?) or set inactive
-- ENH-008(?) -- Email people that supplies have been delivered to their box, their room, or other place
-- ENH-009(?) -- Allow people to list items they supply (with status such as available, or 'on back-order', or 'gone'
-- DEP-003(?) -- Use Puma web-server instead of WEBrick
-- DEP-004(?) -- Use Ruby 2.something instead of Ruby 1.9.3
-
+*** UNPRIORITIZED IMPROVEMENTS ***
+- ENH-0008(?) -- Email people that supplies have been delivered to their box, their room, or other place
+- DEP-0003(?) -- Use Puma web-server instead of WEBrick
+- STA-0003(?) -- Use Ruby 2.something instead of Ruby 1.9.3
+- BUG-0001(?) -- (2016-04) I couldn't seem to inspect the db from within the SQLite3 console anymore
+- PRO-0002(?) -- Learn how to use JSON with Rails (and RubyMine)
+- PRO-0003(?) -- Learn how to use Javascript within Rails (and RubyMine)
+- STA-0002(?) -- Go to Rails 5
 ************* OTHER STUFF ****************************
 (nothing for now)
+
+************* DONE FOR RELEASE 0.1 *******************
 
 

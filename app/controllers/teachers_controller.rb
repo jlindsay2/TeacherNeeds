@@ -1,6 +1,7 @@
 class TeachersController < ApplicationController
   def index
     @teachers = Teacher.all
+    @teachers = @teachers.sort_by {|t| [t.last_name.downcase, t.first_name.downcase]}
   end
 
   def new
