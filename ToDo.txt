@@ -35,7 +35,7 @@
     Get it fully and universally used at ECHS
 - ENH-0010(1.01) -- Learn how to use cookies in rails so that the user will go back to the last page viewed
 - ENH-0001(1.2) -- Password and Login (Privileges / Security / Authentication)
-    - ENH-0012(1.2) -- some kind of admin login, with admin rights
+    - ENH-0012(1.2) -- some kind of admin login, with admin rights 
 - MAI-0001(1.4) -- Use partial forms. (removing duplicate code)
 - STA-0001(1.6) -- Test driven development (for long term stability)
 - PRO-0001(1.8) -- Learn to use interactive debugger with Rails
