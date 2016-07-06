@@ -22,44 +22,49 @@
     Got Heroku Toobelt installed and running via command line.  Using PostgresSQL now instead of SQLite3.
     Committed code to GitHub.  Connected Heroku to GitHub.  Told Heroku to deploy code in GitHub.
     Migrated db on Heroku.  Renamed URL to "teacher-needs.herokuapp.com".  Fixed some CSS to make UI more attractive.
-- BUG-0002(1.0) -- Sort Teacher List by Last Name + First Name
+- BUG-0002(1.0) -- Sort Teacher List by Last Name + First Name [build 8]
+- BUG-0003 -- If a teacher has no requests in their list, their page looks funky. [build 9]
 
-*************** IN PROCESS *****************
-- DEP-0002(1.1) -- Get Beta Test Going: 2-5 teachers, Atiere, Lisa, and principal
-    * Can we alpha/beta test this during the summer (go to ECHS?  Talk to Lisa / Atiere about it?)
-    * Who could be users this summer?  How does non-teaching staff get materials?
+*************** IN PROCESS ****************************************************
+- DEP-0002(1.1) -- Get Beta Test Going
+    * Check with Lisa 7/7/16
+    * It started 7/5/16 with showing Lisa and Emily how to use it.
+********************************************************************************
 
 ********** IMPROVEMENTS TO-DO (PRIORITIZED) ************
-*** LAST BUG[Next ID: #3], ENHancement[11], MAIntainablity[3], STAbility[2], PROductivy[4], DEPloyment[e is last id]
+*** NEXT IDS: BUGs=3, ENHancements=13, MAIntainablity=3, STAbility=3, PROductivy=5, DEPloyment=5
 - DEP-0003(1.0) -- ON-HOLD -- waiting for successful Beta test (item DEP-0002)
     Get it fully and universally used at ECHS
-- ENH-0010(1.01) -- Learn how to use cookies in rails so that the user will go back to the last page viewed
-- ENH-0001(1.2) -- Password and Login (Privileges / Security / Authentication)
-    - ENH-0012(1.2) -- some kind of admin login, with admin rights 
+- ALL ENHANCEMENTS ON HOLD FOR NOW (until we see if there is interest and need)
+    - ENH-0008(1.1) -- Email people that supplies have been delivered to their box, their room, or other place
+        -- Also, could email suppliers once a day with how many requests are unfilled (?)
+    - ENH-0010(1.11) -- Learn how to use cookies in rails so that the user will go back to the last page viewed
+    - ENH-0001(1.2) -- Password and Login (Privileges / Security / Authentication)
+    - ENH-0012(1.2) -- some kind of admin login, with admin rights, depends on ENH-0001
+    - ENH-0005(2) -- Validation of fields
+    - ENH-0007(2) -- ability to remove/inactivate/hide a teacher [for now, just overwrite or ignore them or put in a comment...]
+    - ENH-0002(2) -- Sort 'All Needs List' by different methods (a) Date or (b) Teacher & Date
+    - ENH-0003(3) -- Filter by teacher (a watch list)
+    - ENH-0004(4) -- Filter or sort by type of request (so that people can see if anyone wants what they have)
+    - ENH-0009(4) -- Allow people to list items they supply (with status such as available, or 'on back-order', or 'gone')
+        requested by Lawrence Pang 7/2/16
+
+----> stuff not on hold <-----
+- PRO-0004(1) -- (2016-04)
+    - how about using PostgreSQL to inspect the db?
+    - I couldn't seem to inspect the db from within the SQLite3 console anymore;
 - MAI-0001(1.4) -- Use partial forms. (removing duplicate code)
 - STA-0001(1.6) -- Test driven development (for long term stability)
 - PRO-0001(1.8) -- Learn to use interactive debugger with Rails
-- ENH-0005(2) -- Validation of fields
 - DEP-0004(2) -- Get my own URL, e.g. TeacherNeeds.com
 - MAI-0002(2) -- Refactor 'teacher_need' to 'need'?
-- ENH-0007(2) -- ability to remove/inactivate/hide a teacher [for now, just overwrite or ignore them or put in a comment...]
-- ENH-0002(2) -- Sort 'All Needs List' by different methods (a) Date or (b) Teacher & Date
-- ENH-0003(3) -- Filter by teacher (a watch list)
-- ENH-0004(4) -- Filter or sort by type of request (so that people can see if anyone wants what they have)
-- ENH-0009(4) -- Allow people to list items they supply (with status such as available, or 'on back-order', or 'gone')
-    requested by Lawrence Pang 7/2/16
 
 *** UNPRIORITIZED IMPROVEMENTS ***
-- ENH-0008(?) -- Email people that supplies have been delivered to their box, their room, or other place
 - DEP-0003(?) -- Use Puma web-server instead of WEBrick
 - STA-0003(?) -- Use Ruby 2.something instead of Ruby 1.9.3
-- BUG-0001(?) -- (2016-04) I couldn't seem to inspect the db from within the SQLite3 console anymore
 - PRO-0002(?) -- Learn how to use JSON with Rails (and RubyMine)
 - PRO-0003(?) -- Learn how to use Javascript within Rails (and RubyMine)
 - STA-0002(?) -- Go to Rails 5
-************* OTHER STUFF ****************************
-(nothing for now)
 
-************* DONE FOR RELEASE 0.1 *******************
 
 

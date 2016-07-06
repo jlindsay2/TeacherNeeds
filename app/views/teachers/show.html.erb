@@ -12,7 +12,7 @@
   <tr>
     <td>
       <h2>Existing Needs</h2>
-      <table border = 1>
+      <table border=1 class="center">
         <tr>
           <th>Status</th>
           <th>Description</th>
@@ -62,21 +62,15 @@
             <%= f.submit %>
           </p>
       <% end %>
-
-    </td>
-  </tr>
-  <!-- for placement of the links and notes, putting this into a second row, first column -->
-  <tr>
-    <td>
-      <%= link_to 'Home Page', root_path %><br>
-      <%= link_to 'Teachers List', teachers_path %><br>
-      <%= link_to 'All Teacher Needs List', teacher_needs_path %>
-
-      <h3>
-      <p>Teachers, please note that it may take up to three school days to fill your request for routine items.
-         <br>Other types of items may take longer.
-      </p>
-      </h3>
+      <h4>
+        <p>Teachers, please note that it may take up to three school days to fill your request for routine items.
+          <br>Other types of items may take longer.
+        </p>
+      </h4>
     </td>
   </tr>
 </table>
+
+<%= link_to 'Home Page', root_path %><br>
+<%= link_to 'Teachers List', teachers_path %><br>
+<%= link_to 'All Teacher Needs List', teacher_needs_path %>
