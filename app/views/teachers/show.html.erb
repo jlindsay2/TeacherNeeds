@@ -20,6 +20,7 @@
           <th>Creation Date</th>
           <th>Last Updated</th>
           <th>Mark It...</th>
+
         </tr>
 
         <% @teacher.teacher_needs.each do |need| %>
@@ -37,7 +38,7 @@
                   <% end %>
                   <%= link_to('Closed', close_teacher_need_path(need), method: 'patch') %>
                 </td>
-                <td>&nbsp;&nbsp;
+                <td>
                   <%= link_to('Edit', edit_teacher_teacher_need_path(@teacher,need)) %>
                 </td>
               </tr>
