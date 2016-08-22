@@ -6,7 +6,8 @@ class TeacherNeedsController < ApplicationController
   $debugging = []
   def index
     #$debugging << "--------------------->TeacherNeedsController::index() called."
-    @teacher_needs = TeacherNeed.all
+    #@teachers = Teacher.all.sort_by {|t| [t.last_name.downcase, t.first_name.downcase]}
+    @teacher_needs = TeacherNeed.all.sort_by {|t| [t.created_at, t.teacher.last_name.downcase, t.teacher.first_name.downcase ]}
   end
 
   def create
