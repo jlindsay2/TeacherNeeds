@@ -1,0 +1,14 @@
+CONFIGURATION NOTES
+
+Owner/Developer: Jim Lindsay, jim@jerel.com, 510-681-6484
+
+IDE: RubyMine 8.0.1, free teacher's account as of 8/23/16
+
+VCS: GitHub, on free account
+
+Host: Heroku, on free account as of 8/23/16
+
+Rails Version:
+
+WebServer: WEBrick for now
+

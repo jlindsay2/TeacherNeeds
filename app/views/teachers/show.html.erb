@@ -12,6 +12,7 @@
   <tr>
     <td>
       <h2>Existing Needs</h2>
+      <!-- %= check_box_tag("ShowClosedItems") % > Show Closed Items -->
       <table border=1 class="center">
         <tr>
           <th>Status</th>
@@ -32,7 +33,7 @@
                 <td><%= show_date need.created_at %></td>
                 <td><%= show_date need.updated_at %></td>
                 <td>
-                  <% if need.status == "Filled" %>
+                  <% if need.status == "Filled" or need.status == "Delivered" %>
                       <%= link_to('Active', reactivate_teacher_need_path(need), method: 'patch') %>
                       &nbsp;&nbsp;
                   <% end %>

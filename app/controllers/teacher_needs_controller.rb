@@ -1,4 +1,4 @@
-FILLED = 'Filled'
+FILLED = 'Delivered'
 ACTIVE = 'Active'
 CLOSED = 'Closed'
 
@@ -42,7 +42,7 @@ class TeacherNeedsController < ApplicationController
     end
 
     redirect_to teacher_needs_path
-    end
+  end
 
   def close
     @need = TeacherNeed.find(params[:id])

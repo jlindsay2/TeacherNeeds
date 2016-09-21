@@ -1,5 +1,73 @@
 
 
+
+
+*************** IN PROCESS ****************************************************
+- DEP-0002(v0.1) -- Get Beta Test Going
+- DEP-0003(v0.1) -- Get it fully and universally used at ECHS
+- DBG-0002 -- Make more graphically appealing, including images [Melody Shah 8/23/16 and students working on as of 8/23/16]
+********************************************************************************
+
+********************************************************
+********** IMPROVEMENTS TO-DO (PRIORITIZED) ************
+********************************************************
+---> NEXT IDS: BUGs=6, ENHancements=16, DBG=Design Bugs=4, MAIntainablity=4, STAbility=3, PROductivy=5, DEPloyment=5
+
+********** DONE locally, but not pushed ************
+- DBG-0003 -- change "Filled" to "Delivered" (Done) -- not ready to ship......
+- add link to the ECHS-WishList form
+
+********** stuff not on hold ********
+- ENH-0015 -- Make it possible to see which items have been Filled and/or Closed. [partially done -- checkbox is showing]
+- ENH-0007 -- ability to remove/inactivate/hide a teacher [for now, just overwrite or ignore them or put in a comment...]
+- DBG-0001 -- Put links horizontally on top and bottom of main data pages.
+
+- PRO-0004 -- (2016-04)
+    - how about using PostgreSQL to inspect the db?
+    - I couldn't seem to inspect the db from within the SQLite3 console anymore;
+- MAI-0001 -- Use partial forms. (removing duplicate code)
+- STA-0001 -- Test driven development (for long term stability)
+- PRO-0001 -- Learn to use interactive debugger with Rails
+- DEP-0004 -- Get my own URL, e.g. TeacherNeeds.com
+- MAI-0002 -- Refactor 'teacher_need' to 'need'?
+- MAI-0004 -- Store line item statuses in the db in abstract form, so that the status is independent of what the user sees and is sortable.
+    "0-ActiveNeed", "9-Closed", "5-Delivered"
+
+************ ON HOLD (PRIORITIZED) *************
+- ALL ENHANCEMENTS ON HOLD FOR NOW (until we see if there is interest and need)
+    - ENH-0016 -- Internationalize and localize to Spanish
+    - ENH-0013 -- add a category field ("standard supplies", "Prof. Dev", "Tech Support", "other")
+    - ENH-0008 -- Email people that supplies have been delivered to their box, their room, or other place
+        -- Also, could email suppliers once a day with how many requests are unfilled (?)
+    - ENH-0010 -- Learn how to use cookies in rails so that the user will go back to the last page viewed
+    - ENH-0001 -- Password and Login (Privileges / Security / Authentication)
+    - ENH-0012 -- some kind of admin login, with admin rights, depends on ENH-0001
+    - ENH-0005 -- Validation of fields
+    - ENH-0002 -- Sort 'All Needs List' by different methods (a) Date or (b) Teacher & Date
+    - ENH-0003 -- Filter by teacher (a watch list)
+    - ENH-0004 -- Filter or sort by type of request (so that people can see if anyone wants what they have)
+    - ENH-0009 -- Allow people to list items they supply (with status such as available, or 'on back-order', or 'gone')
+        requested by Lawrence Pang 7/2/16
+
+********************************************************
+********** UNPRIORITIZED ENHANCEMENTS ************
+********************************************************
+*** UNPRIORITIZED IMPROVEMENTS ***
+- DEP-0003 -- Use Puma web-server instead of WEBrick
+- STA-0003 -- Use Ruby 2.something instead of Ruby 1.9.3
+- PRO-0002 -- Learn how to use JSON with Rails (and RubyMine)
+- PRO-0003 -- Learn how to use Javascript within Rails (and RubyMine)
+- STA-0002 -- Go to Rails 5
+
+- ENH-0014 -- Allow teachers to request student (or other?) volunteers.
+Requested 8/23/16 by Melody Shah and Crystal Ng.
+Use Case #1: 5 students needed as volunteers for LunaFest.  Interested volunteers
+could then contact the teacher, and when the slots were filled or the event was over, the teacher could close down the
+volunteer-opportunity.  Important: this information would be publicly available, while other teacher needs would be
+protected from the public.
+Dependent on ENH_0013 (categories), and ENH-0001 (passwords)
+
+
 *********** VERSION 0.1 ********************
 - Welcome Page: Links to teachers and linka to Needs list
 - Teachers: Have model, seed data, can show list, create new teachers, edit/update teachers
@@ -25,56 +93,5 @@
 - BUG-0002 -- Sort Teacher List by Last Name + First Name [build 8]
 - BUG-0003 -- If a teacher has no requests in their list, their page looks funky. [build 9]
 
-VERSION 0.2, 8/21/16 10:20pm
+********* VERSION 0.2, 8/21/16 10:20pm ***********
 FIXED BUG-0005 -- Sorting of Needs should be by original creation date, then by teacher name
-
-*************** IN PROCESS ****************************************************
-- DEP-0002(v0.1) -- Get Beta Test Going
-- DEP-0003(v0.1) -- Get it fully and universally used at ECHS
-********************************************************************************
-
-********************************************************
-********** IMPROVEMENTS TO-DO (PRIORITIZED) ************
-********************************************************
----> NEXT IDS: BUGs=6, ENHancements=14, DBG=Design Bugs=2, MAIntainablity=3, STAbility=3, PROductivy=5, DEPloyment=5
-
-********** stuff not on hold ********
-
-- DBG-0001 -- Put links horizontally on top and bottom of main data pages.
-- ENH-0007 -- ability to remove/inactivate/hide a teacher [for now, just overwrite or ignore them or put in a comment...]
-- PRO-0004 -- (2016-04)
-    - how about using PostgreSQL to inspect the db?
-    - I couldn't seem to inspect the db from within the SQLite3 console anymore;
-- MAI-0001 -- Use partial forms. (removing duplicate code)
-- STA-0001 -- Test driven development (for long term stability)
-- PRO-0001 -- Learn to use interactive debugger with Rails
-- DEP-0004 -- Get my own URL, e.g. TeacherNeeds.com
-- MAI-0002 -- Refactor 'teacher_need' to 'need'?
-
-************ ON HOLD (PRIORITIZED) *************
-- ALL ENHANCEMENTS ON HOLD FOR NOW (until we see if there is interest and need)
-    - ENH-0013 -- add a category field ("standard supplies", "Prof. Dev", "Tech Support", "other")
-    - ENH-0008 -- Email people that supplies have been delivered to their box, their room, or other place
-        -- Also, could email suppliers once a day with how many requests are unfilled (?)
-    - ENH-0010 -- Learn how to use cookies in rails so that the user will go back to the last page viewed
-    - ENH-0001 -- Password and Login (Privileges / Security / Authentication)
-    - ENH-0012 -- some kind of admin login, with admin rights, depends on ENH-0001
-    - ENH-0005 -- Validation of fields
-    - ENH-0002 -- Sort 'All Needs List' by different methods (a) Date or (b) Teacher & Date
-    - ENH-0003 -- Filter by teacher (a watch list)
-    - ENH-0004 -- Filter or sort by type of request (so that people can see if anyone wants what they have)
-    - ENH-0009 -- Allow people to list items they supply (with status such as available, or 'on back-order', or 'gone')
-        requested by Lawrence Pang 7/2/16
-
-********************************************************
-********** UNPRIORITIZED ENHANCEMENTS ************
-********************************************************
-*** UNPRIORITIZED IMPROVEMENTS ***
-- DEP-0003 -- Use Puma web-server instead of WEBrick
-- STA-0003 -- Use Ruby 2.something instead of Ruby 1.9.3
-- PRO-0002 -- Learn how to use JSON with Rails (and RubyMine)
-- PRO-0003 -- Learn how to use Javascript within Rails (and RubyMine)
-- STA-0002 -- Go to Rails 5
-
-
-
