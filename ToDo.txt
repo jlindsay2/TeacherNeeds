@@ -11,29 +11,35 @@
 ********************************************************
 ********** IMPROVEMENTS TO-DO (PRIORITIZED) ************
 ********************************************************
----> NEXT IDS: BUGs=6, ENHancements=16, DBG=Design Bugs=4, MAIntainablity=4, STAbility=3, PROductivy=5, DEPloyment=5
+---> NEXT IDS: BUGs=7, ENHancements=16, DBG=Design Bugs=4, MAIntainablity=6, STAbility=3, PROductivy=5, DEPloyment=5
 
 ********** DONE locally, but not pushed ************
 - DBG-0003 -- change "Filled" to "Delivered" (Done) -- not ready to ship......
 - add link to the ECHS-WishList form
 
 ********** stuff not on hold ********
-- ENH-0015 -- Make it possible to see which items have been Filled and/or Closed. [partially done -- checkbox is showing]
+- PRO-0005 & BUG-0007 -- Do something in Javascript: When editing a teacher-need, the need-status should be a picklist, not a string
+- ENH-0015 -- Make it possible to see items that have been Closed. [partially done -- checkbox is showing]
 - ENH-0007 -- ability to remove/inactivate/hide a teacher [for now, just overwrite or ignore them or put in a comment...]
-- DBG-0001 -- Put links horizontally on top and bottom of main data pages.
+- MAI-0005 -- What is going on with the CSS files such that it seems only the welcome.css is being used??
+- MAI-0004 -- Store line item statuses in the db in abstract form, so that the status is independent of what the user sees and is sortable.
+    Perhaps: "0-ActiveNeed", "9-Closed", "5-Delivered"
 
 - PRO-0004 -- (2016-04)
     - how about using PostgreSQL to inspect the db?
-    - I couldn't seem to inspect the db from within the SQLite3 console anymore;
+    - I couldn't seem to inspect thedb from within the SQLite3 console anymore;
+
 - MAI-0001 -- Use partial forms. (removing duplicate code)
 - STA-0001 -- Test driven development (for long term stability)
 - PRO-0001 -- Learn to use interactive debugger with Rails
 - DEP-0004 -- Get my own URL, e.g. TeacherNeeds.com
 - MAI-0002 -- Refactor 'teacher_need' to 'need'?
-- MAI-0004 -- Store line item statuses in the db in abstract form, so that the status is independent of what the user sees and is sortable.
-    "0-ActiveNeed", "9-Closed", "5-Delivered"
 
 ************ ON HOLD (PRIORITIZED) *************
+- DBG-0001 -- UI changes from Melody Shah and Jeff Feng.
+                Put links horizontally on top and bottom of main data pages.
+                Lots of CSS changes.
+                PLUS an about or contributors page
 - ALL ENHANCEMENTS ON HOLD FOR NOW (until we see if there is interest and need)
     - ENH-0016 -- Internationalize and localize to Spanish
     - ENH-0013 -- add a category field ("standard supplies", "Prof. Dev", "Tech Support", "other")
@@ -95,3 +101,4 @@ Dependent on ENH_0013 (categories), and ENH-0001 (passwords)
 
 ********* VERSION 0.2, 8/21/16 10:20pm ***********
 FIXED BUG-0005 -- Sorting of Needs should be by original creation date, then by teacher name
+FIXED BUG-0006 -- On Teacher Edit Page, the Existing Needs table is no longer vertically centered.
