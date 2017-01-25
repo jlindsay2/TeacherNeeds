@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TeacherNeeds</title>
+  <link data-turbolinks-track="true" href="main.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/javascripts/defaults.js"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="oN2gFCw/akI+BTtMOay8LqdiWs7ja246Z2a6AN/d3UY=" name="csrf-token" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+
+<ul>
+	<li><a href="index.html">Home</a></li>
+    <li><a href="teachers.html">Teachers/Staff List</a></li>
+	<li><a href="teacher_needs.html">Requests</a></li>
+</ul>
+
+<!-- Find me in app/views/teachers/show.html.erb -->
+<div style="padding:10px;margin-top:10px"></div>
+  <h1>Diana Armijo</h1>
+  <center>
+    Room: E117-B<br>
+    
+  </center>
+
+<table cellspacing="10" cellpadding="50">
+  <tr>
+    <td>
+    <div class="form" style="padding-left: 5px;padding-right: 5px;max-width: 1000px !important;">
+      <h2>Existing Needs</h2>
+      <!-- %= check_box_tag("ShowClosedItems") % > Show Closed Items -->
+      <table border=1 class="center">
+        <tr>
+          <th>Status</th>
+          <th>Description</th>
+          <th>Comments</th>
+          <th>Creation Date</th>
+          <th>Last Updated</th>
+          <th>Mark It...</th>
+
+        </tr>
+
+      </table>
+      </div>
+    </td>
+    <td>
+    
+    <div class="form">
+      <h2>What do You Need?</h2>
+      <!-- Note that this form will be routed to TeacherNeedsController::create() -->
+      <form accept-charset="UTF-8" action="/teachers/6/teacher_needs" class="new_teacher_need" id="new_teacher_need" method="post">
+      	<div style="display:none">
+        	<input name="utf8" type="hidden" value="&#x2713;" />
+            <input name="authenticity_token" type="hidden" value="oN2gFCw/akI+BTtMOay8LqdiWs7ja246Z2a6AN/d3UY=" />
+         </div>
+          <div class="field-wrap">
+            <label for="teacher_need_description">Description</label>
+            <input id="teacher_need_description" name="teacher_need[description]" type="text" />
+          </div>
+          <div class="field-wrap">
+            <label for="teacher_need_comments">Comments</label>
+            <textarea id="teacher_need_comments" name="teacher_need[comments]">
+</textarea>
+          </div>
+          <div class="field-wrap">
+            <button type="submit" name="commit" class="button button-block">Request</button>
+          </div>
+</form></div>      <h4>
+        <p>Teachers, please note that it may take up to three school days to fill your request for routine items.
+          <br>Other types of items may take longer.
+        </p>
+      </h4>
+    </td>
+  </tr>
+</table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

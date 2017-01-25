@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TeacherNeeds</title>
+  <link data-turbolinks-track="true" href="main.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/javascripts/defaults.js"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="RvidvsNghqypqw8yq9brvVmpxZhnWTtF4IfcvKepQRw=" name="csrf-token" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+
+<ul>
+	<li><a href="index.html">Home</a></li>
+    <li><a href="teachers.html">Teachers/Staff List</a></li>
+	<li><a href="teacher_needs.html">Requests</a></li>
+</ul>
+<div style="padding:10px;margin-top:10px"></div>
+<h1>New Teacher</h1>
+
+<div class="form">
+<form accept-charset="UTF-8" action="/teachers" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="RvidvsNghqypqw8yq9brvVmpxZhnWTtF4IfcvKepQRw=" /></div>
+    <div class="field-wrap">
+      <label for="teacher_first_name">First name</label>
+      <input id="teacher_first_name" name="teacher[first_name]" type="text" />
+    </div>
+    <div class="field-wrap">
+      <label for="teacher_last_name">Last name</label>
+      <input id="teacher_last_name" name="teacher[last_name]" type="text" />
+    </div>
+    <div class="field-wrap">
+      <label for="teacher_room">Room</label>
+      <input id="teacher_room" name="teacher[room]" type="text" />
+    </div>
+    <div class="field-wrap">
+      <label for="teacher_comments">Comments</label>
+      <textarea id="teacher_comments" name="teacher[comments]">
+</textarea>
+    </div>
+    <div class="field-wrap">
+    <button name="commit" type="submit" class="button button-block">Save</button>
+    </div>
+</form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TeacherNeeds</title>
+  <link data-turbolinks-track="true" href="main.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/javascripts/defaults.js"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="OldcE/2lijGxy/0kiPHf+N5M5I0BUcUw8+VPkz1sZxU=" name="csrf-token" />
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+
+<ul>
+	<li><a href="index.html">Home</a></li>
+    <li><a href="teachers.html">Teachers/Staff List</a></li>
+	<li><a class="active" href="#">Requests</a></li>
+</ul>
+
+
+<!--
+<h1>TeacherNeeds#index</h1>
+<p>Find me in app/views/teacher_needs/index.html.erb</p>
+-->
+<div style="padding:10px;margin-top:10px"></div>
+<h1> All Teacher Needs Page </h1>
+
+
+<form accept-charset="UTF-8" action="/teacher_teacher_needs?prefix=teacher_teacher_needs" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="patch" /><input name="authenticity_token" type="hidden" value="OldcE/2lijGxy/0kiPHf+N5M5I0BUcUw8+VPkz1sZxU=" /></div>
+    <table class="center">
+      <caption>All Unfilled Needs</caption>
+      <tr>
+        <th>Delivered?</th>
+        <th>Teacher</th>
+        <th>Teacher Room</th>
+        <th>Description</th>
+        <th>Comments</th>
+        <th>Creation Date</th>
+        <th>Last Updated</th>
+        <th>Status</th>
+      </tr>
+            <tr>
+              <td><input id="12" name="12" type="checkbox" value="1" /></td>
+              <td>Ng,&nbsp;Monica</td>
+              <td>A130</td>
+              <td>large binder clips</td>
+              <td>i never received this</td>
+              <td>08/19/2016</td>
+              <td>09/29/2016</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td><input id="13" name="13" type="checkbox" value="1" /></td>
+              <td>Ng,&nbsp;Monica</td>
+              <td>A130</td>
+              <td>post-its</td>
+              <td></td>
+              <td>08/19/2016</td>
+              <td>08/24/2016</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td><input id="27" name="27" type="checkbox" value="1" /></td>
+              <td>Kingsbury,&nbsp;Bill</td>
+              <td>B303</td>
+              <td>2 to 6 TN450 toner cartridges</td>
+              <td>Off-brand is available for less than $10/each, but Brother Brand is $46!</td>
+              <td>08/19/2016</td>
+              <td>08/19/2016</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td><input id="35" name="35" type="checkbox" value="1" /></td>
+              <td>Lindsay,&nbsp;Jim</td>
+              <td>A231 and D201</td>
+              <td>135 key (&quot;SC4 USA&quot;)</td>
+              <td>Needed because it locks stuff up in D201
+[on order 9/13/16]</td>
+              <td>08/19/2016</td>
+              <td>09/13/2016</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td><input id="50" name="50" type="checkbox" value="1" /></td>
+              <td>Lapidus,&nbsp;Debra</td>
+              <td>b205</td>
+              <td>a drum for my copy machine  its a Brother TN620 or TN-650</td>
+              <td>at least that is what is indicatedon the screen when I print-- it says replace parts and underneath, it says drum; I found one on EBAY that i will purchase but expect to be reinbursed; about $20 item</td>
+              <td>08/26/2016</td>
+              <td>09/21/2016</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td><input id="84" name="84" type="checkbox" value="1" /></td>
+              <td>Jraige,&nbsp;Gaby</td>
+              <td>D105</td>
+              <td>LCD Projector Mount</td>
+              <td>The mount for the projector on my cart is broken and needs to be replaced.</td>
+              <td>08/29/2016</td>
+              <td>08/29/2016</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td><input id="107" name="107" type="checkbox" value="1" /></td>
+              <td>Corpuz,&nbsp;Merl</td>
+              <td>B102</td>
+              <td>HP LaserJet Ink CA4096</td>
+              <td>Ink for LasterJet 2200DN printer</td>
+              <td>09/21/2016</td>
+              <td>09/21/2016</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td><input id="117" name="117" type="checkbox" value="1" /></td>
+              <td>Decker,&nbsp;Brad</td>
+              <td>A115</td>
+              <td>Ink for my printer.</td>
+              <td>HP LaserJet Pro 400 Color </td>
+              <td>09/21/2016</td>
+              <td>09/21/2016</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td><input id="133" name="133" type="checkbox" value="1" /></td>
+              <td>Lapidus,&nbsp;Debra</td>
+              <td>b205</td>
+              <td>I need my pencil sharpener mounted to the wall</td>
+              <td>I bought my own in, but it already broke.</td>
+              <td>09/29/2016</td>
+              <td>09/29/2016</td>
+              <td>Active</td>
+            </tr>
+    </table>
+    <br>
+    <center>
+    <button name="commit" type="submit" class="button button-2 button-block">Save changes</button>
+    </center>
+</form>
+<h2>HINTS AND TIPS</h2>
+  <p>To print this page out, hold down the Ctrl key and press 'P', or select Print from your browser.</p>
+
+
+</body>
+</html>
